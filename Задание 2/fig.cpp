@@ -125,6 +125,9 @@ public:
         name = "Ęâŕäđŕň";
     }
 };
+void print_info(const Figure* figure) {
+    figure->print_info();
+}
 
 int main() {
 
