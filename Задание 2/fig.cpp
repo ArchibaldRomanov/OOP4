@@ -6,7 +6,7 @@ protected:
     std::string name;
 
 public:
-    Figure() : name("Фигура") {}
+    Figure() : name("Г”ДЌДѓГіД‘Е•") {}
 
     std::string get_name() const {
         return name;
@@ -17,13 +17,13 @@ public:
 
 class Triangle : public Figure {
 protected:
-    double a, b, c; // стороны
-    double A, B, C; // углы
+    double a, b, c; // Е„Е€Г®Д‘Г®Г­Е±
+    double A, B, C; // ГіДѓГ«Е±
 
 public:
     Triangle(double a, double b, double c, double A, double B, double C)
         : a(a), b(b), c(c), A(A), B(B), C(C) {
-        name = "Треугольник";
+        name = "Е‡Д‘ДєГіДѓГ®Г«ГјГ­ДЌД™";
     }
 
     double get_a() const { return a; }
@@ -35,8 +35,8 @@ public:
 
     void print_info() const override {
         std::cout << name << ":" << std::endl;
-        std::cout << "Стороны: a=" << a << " b=" << b << " c=" << c << std::endl;
-        std::cout << "Углы: A=" << A << " B=" << B << " C=" << C << std::endl;
+        std::cout << "ЕѓЕ€Г®Д‘Г®Г­Е±: a=" << a << " b=" << b << " c=" << c << std::endl;
+        std::cout << "Г“ДѓГ«Е±: A=" << A << " B=" << B << " C=" << C << std::endl;
         std::cout << std::endl;
     }
 };
@@ -45,7 +45,7 @@ class RightTriangle : public Triangle {
 public:
     RightTriangle(double a, double b, double c, double A, double B)
         : Triangle(a, b, c, A, B, 90) {
-        name = "Прямоугольный треугольник";
+        name = "ДЋД‘Л™Д›Г®ГіДѓГ®Г«ГјГ­Е±Г© Е€Д‘ДєГіДѓГ®Г«ГјГ­ДЌД™";
     }
 };
 
@@ -53,7 +53,7 @@ class IsoscelesTriangle : public Triangle {
 public:
     IsoscelesTriangle(double a, double b, double c, double A, double B, double C)
         : Triangle(a, b, c, A, B, C) {
-        name = "Равнобедренный треугольник";
+        name = "ДђЕ•ГўГ­Г®ГЎДєГ¤Д‘ДєГ­Г­Е±Г© Е€Д‘ДєГіДѓГ®Г«ГјГ­ДЌД™";
     }
 };
 
@@ -61,20 +61,20 @@ class EquilateralTriangle : public Triangle {
 public:
     EquilateralTriangle(double side)
         : Triangle(side, side, side, 60, 60, 60) {
-        name = "Равносторонний треугольник";
+        name = "ДђЕ•ГўГ­Г®Е„Е€Г®Д‘Г®Г­Г­ДЌГ© Е€Д‘ДєГіДѓГ®Г«ГјГ­ДЌД™";
     }
 };
 
 class Quadrilateral : public Figure {
 protected:
-    double a, b, c, d; // стороны
-    double A, B, C, D; // углы
+    double a, b, c, d; // Е„Е€Г®Д‘Г®Г­Е±
+    double A, B, C, D; // ГіДѓГ«Е±
 
 public:
     Quadrilateral(double a, double b, double c, double d,
         double A, double B, double C, double D)
         : a(a), b(b), c(c), d(d), A(A), B(B), C(C), D(D) {
-        name = "Четырёхугольник";
+        name = "Г—ДєЕ€Е±Д‘ВёЕ‘ГіДѓГ®Г«ГјГ­ДЌД™";
     }
 
     double get_a() const { return a; }
@@ -88,8 +88,8 @@ public:
 
     void print_info() const override {
         std::cout << name << ":" << std::endl;
-        std::cout << "Стороны: a=" << a << " b=" << b << " c=" << c << " d=" << d << std::endl;
-        std::cout << "Углы: A=" << A << " B=" << B << " C=" << C << " D=" << D << std::endl;
+        std::cout << "ЕѓЕ€Г®Д‘Г®Г­Е±: a=" << a << " b=" << b << " c=" << c << " d=" << d << std::endl;
+        std::cout << "Г“ДѓГ«Е±: A=" << A << " B=" << B << " C=" << C << " D=" << D << std::endl;
         std::cout << std::endl;
     }
 };
@@ -98,7 +98,7 @@ class Parallelogram : public Quadrilateral {
 public:
     Parallelogram(double a, double b, double A, double B)
         : Quadrilateral(a, b, a, b, A, B, A, B) {
-        name = "Параллелограмм";
+        name = "ДЋЕ•Д‘Е•Г«Г«ДєГ«Г®ДѓД‘Е•Д›Д›";
     }
 };
 
@@ -106,7 +106,7 @@ class Rectangle : public Parallelogram {
 public:
     Rectangle(double a, double b)
         : Parallelogram(a, b, 90, 90) {
-        name = "Прямоугольник";
+        name = "ДЋД‘Л™Д›Г®ГіДѓГ®Г«ГјГ­ДЌД™";
     }
 };
 
@@ -114,7 +114,7 @@ class Rhombus : public Parallelogram {
 public:
     Rhombus(double side, double A, double B)
         : Parallelogram(side, side, A, B) {
-        name = "Ромб";
+        name = "ДђГ®Д›ГЎ";
     }
 };
 
@@ -122,7 +122,7 @@ class Square : public Rectangle {
 public:
     Square(double side)
         : Rectangle(side, side) {
-        name = "Квадрат";
+        name = "ДГўЕ•Г¤Д‘Е•Е€";
     }
 };
 
@@ -139,16 +139,16 @@ int main() {
     Parallelogram parallelogram(20, 30, 30, 40);
     Rhombus rhombus(30, 30, 40);
 
-    triangle.print_info();
-    rightTriangle.print_info();
-    isoscelesTriangle.print_info();
-    equilateralTriangle.print_info();
+    print_info(&triangle);
+    print_info(&rightTriangle);
+    print_info(&isoscelesTriangle);
+    print_info(&equilateralTriangle);
 
-    quadrilateral.print_info();
-    rectangle.print_info();
-    square.print_info();
-    parallelogram.print_info();
-    rhombus.print_info();
-
+    print_info(&quadrilateral);
+    print_info(&rectangle);
+    print_info(&square);
+    print_info(&parallelogram);
+    print_info(&rhombus);
+    
     return 0;
 }
